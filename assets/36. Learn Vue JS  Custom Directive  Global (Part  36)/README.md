@@ -1,0 +1,1 @@
+# 36. Learn Vue JS  Custom Directive  Global (Part  36)

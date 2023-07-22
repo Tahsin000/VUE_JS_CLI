@@ -1,0 +1,1 @@
+# 23. Learn Vue JS  Globally import a component (part  23)

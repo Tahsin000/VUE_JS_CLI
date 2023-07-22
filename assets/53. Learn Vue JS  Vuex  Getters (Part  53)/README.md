@@ -1,0 +1,1 @@
+# 53. Learn Vue JS  Vuex  Getters (Part  53)
