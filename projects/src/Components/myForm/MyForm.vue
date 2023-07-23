@@ -1,63 +1,3 @@
-# 35. Learn Vue JS Dynamic Component (Part 35)
-
-- ## App.vue
-
-```vue
-<template>
-  <div class="container">
-    <button
-      @click="componentToRender = 'compHome'"
-      class="btn btn-outline-primary"
-    >
-      Home
-    </button>
-    <button
-      @click="componentToRender = 'compContact'"
-      class="btn btn-outline-primary"
-    >
-      Contact
-    </button>
-    <button
-      @click="componentToRender = 'compAbout'"
-      class="btn btn-outline-primary"
-    >
-      About
-    </button>
-    <button
-      @click="componentToRender = 'myForm'"
-      class="btn btn-outline-primary"
-    >
-      Myform
-    </button>
-    <Keep-alive>
-      <component :is="componentToRender"></component>
-    </Keep-alive>
-  </div>
-</template>
-<script>
-import compHome from "./Components/DynamicComponents/MyHome";
-import compAbout from "./Components/DynamicComponents/myAbout";
-import compContact from "./Components/DynamicComponents/myContact";
-import myForm from "./Components/myForm/MyForm";
-export default {
-  data() {
-    return {
-      componentToRender: "compContact",
-    };
-  },
-  components: {
-    compHome,
-    compAbout,
-    compContact,
-    myForm,
-  },
-};
-</script>
-```
-
-- ## MyForm.vue
-
-```vue
 <template>
 <div class="container mt-5">
   <div class="row justify-content-center">
@@ -147,11 +87,11 @@ export default {
           </div>
           <div class="card-title">
             <!-- white-space:pre-line -->
-            <p class="lead "><span class="fw-bold">Message: </span> {{ message }}</p>
+            <p class="lead "><span class="fw-bold">Message: </span> {{ message }}</p> 
             <hr/>
           </div>
           <div class="card-title">
-            <p class="lead"><span class="fw-bold">Email: </span>
+            <p class="lead"><span class="fw-bold">Email: </span> 
               <ul class="list-unstyled">
                 <li v-for="mail in sendMail" :key="mail">{{ mail }}</li>
               </ul>
@@ -167,7 +107,7 @@ export default {
             <hr/>
           </div>
         </div>
-      </div>
+      </div>  
     </div>
   </div>
 </div>
@@ -201,35 +141,9 @@ export default {
       console.log("activated");
     },
     deactivated(){
-      console.log("activated");
+      console.log("deactivated");
     }
 }
 </script>
 
 <style></style>
-
-```
-
-- ## myHome.vue
-
-```vue
-<template>
-  <div>This is Home Page</div>
-</template>
-```
-
-- ## myContact.vue
-
-```vue
-<template>
-  <div>This is Contact Page</div>
-</template>
-```
-
-- ## myAbout.vue
-
-```vue
-<template>
-  <div>This is About Page</div>
-</template>
-```
