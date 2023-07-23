@@ -1,26 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <mySideBar 
+      :firstName = "fName"
+      :lastName = "lName"
+      :age = "myAge"
+      @updateValue = "fName = $event"
+    />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import mySideBar from "./components/share/SideBar.vue";
 
 export default {
-  name: 'App',
+  data() {
+    return {
+      fName:"Jon",
+      lName:"Doe",
+      myAge:42
+    };
+  },
   components: {
-    HelloWorld
-  }
-}
+    mySideBar,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
 }
 </style>
