@@ -1,37 +1,32 @@
 <template>
   <div>
-    <mySideBar 
-      :firstName = "fName"
-      :lastName = "lName"
-      :age = "myAge"
-      @updateValue = "fName = $event"
-    />
+    <ListHelper>
+      <ul slot="listItem">
+         <li v-for="list in lists" :key="list">
+        {{ list }}
+        </li>
+      </ul>
+      <p slot="para">user also knows PHP</p>
+    </ListHelper>
   </div>
 </template>
 
 <script>
-import mySideBar from "./components/share/SideBar.vue";
-
+import ListHelper from "./components/ListHelper";
 export default {
-  data() {
-    return {
-      fName:"Jon",
-      lName:"Doe",
-      myAge:42
-    };
-  },
-  components: {
-    mySideBar,
-  },
+    data(){
+      return{
+        lists:['HTML', 'CSS', 'JAVASCRIPT']
+      }
+    },
+    components:{
+      ListHelper,
+    }
 };
 </script>
 
 <style>
-body {
-  font-family: "Raleway", sans-serif;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  align-items: center;
+*{
+  font-family: 'Raleway', sans-serif;
 }
 </style>
