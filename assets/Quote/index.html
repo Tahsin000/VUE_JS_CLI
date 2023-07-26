@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiseWords | random quotes</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/css.css">
+</head>
+<body>
+    <div class="__main">
+        <div class="row" id="app">
+            <p class="lead text-center __title">WiseWords</p>
+            <div v-if="loading"  class="justify-content-center d-flex ">
+                <p class="spinner-border text-secondary" role="status"></p>
+            </div>
+            <div v-else class="">
+                <div v-if="error" class="alert alert-warning" role="alert">
+                    {{errorMsg}}
+                </div>
+                <div v-else class="offset-3 col-6 p-5 position-relative" style="border: 2px solid #1212127c; border-radius: 10px; box-shadow: 5px 5px #1212127c">
+                    <object style="top:-50px;background-color: #fff; padding: 15px;" class="position-absolute" data="asstes/quote-svg.svg" width="100px" height="100px"> </object>
+                    
+                    <p class="lead" style="text-align: justify;">{{ data.content }}</p>
+    
+                    <div class="position-absolute border-rounded rounded-pill border" style="right:45px;">
+                        <div style="padding: 2px 14px"> {{ data.author }} </div>
+                    </div>
+                    <div class="position-relative" style="padding: 2rem 0; margin-top: 40px;">
+                        <div class="position-absolute" style="left: 0; top:70%" >
+                            <div class="d-flex gap-1">
+                                
+                                <small class="border rounded-pill" style="font-size: 12px; opacity: 64%; padding: 0 10px;" v-for="item in data.tags" ::key="item"> {{ item }} </small>
+                            </div>
+                        </div>
+                        <div class="position-absolute" style="right: 0;">
+                            <p class="btn btn-secondary" @click="handleQuote()">Generate Quote</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            
+            
+        </div>
+    </div>
+    <script src="script/js.js"></script>
+    <script src="script/vue.js"></script>
+    <script src="script/app.js"></script>
+</body>
+</html>
