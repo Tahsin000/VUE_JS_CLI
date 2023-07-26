@@ -8,3 +8,38 @@
   font-size: 3rem;
   margin-bottom: 5rem;
 }
+.__content_section {
+  border: 2px solid #1212127c;
+  border-radius: 10px;
+  box-shadow: 5px 5px #1212127c;
+}
+.__svg_style {
+  top: -50px;
+  background-color: #fff;
+  padding: 15px;
+}
+.__main_quotes {
+  text-align: justify;
+}
+.__main_author_section {
+  right: 45px;
+}
+.__main_author {
+  padding: 2px 14px;
+}
+.__tag_section {
+  padding: 2rem 0;
+  margin-top: 40px;
+}
+.__main_tag {
+  left: 0;
+  top: 70%;
+}
+.__tag_content {
+  font-size: 12px;
+  opacity: 64%;
+  padding: 0 10px;
+}
+.__generate_btn {
+  right: 0;
+}
