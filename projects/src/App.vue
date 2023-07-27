@@ -1,9 +1,9 @@
-<template>
+<template lang="">
   <div class="container">
-    <p v-awesome.red.big="'Hotash naki?'"></p>
-    <p v-awesome.green.small="'Hotash naki?'"></p>
-    <hr />
-    <div v-user="userValue"></div>
+    <transition>
+      <div class="p-3 mb-2 bg-success text-white" v-if="display">Hello</div>
+    </transition>
+    <button @click="display = !display" class="btn btn-primary">Toggle</button>
   </div>
 </template>
 
@@ -11,15 +11,22 @@
 export default {
   data() {
     return {
-      userValue: "Franky",
+      display: false,
     };
-  },
-  directives: {
-    user: {
-      bind(el, binding) {
-        el.innerHTML = binding.value;
-      },
-    },
   },
 };
 </script>
+<style>
+.appear-enter {
+  opacity: 0;
+}
+.appear-enter-active {
+  transition: opacity 3s;
+}
+.appear-leave {
+}
+.appear-leave-active {
+  opacity: 0;
+  transition: opacity 3s;
+}
+</style>
