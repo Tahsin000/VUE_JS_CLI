@@ -1,4 +1,3 @@
-
 - # Create a new project include the router
 
   ### 1. Make a mew project in this command | [website](https://vitejs.dev/guide/)
@@ -48,7 +47,7 @@
   import { createRouter, createWebHistory } from "vue-router";
   import App from "./App.vue";
   import "./style.css";
-  import Home from "@/views/Home.vue"; // this is the component import URL 
+  import Home from "@/views/Home.vue"; // this is the component import URL
 
   const router = createRouter({
     history: createWebHistory(),
@@ -56,10 +55,17 @@
       {
         path: "/", // Routing URL
         name: "Home", // Routing name
-        component: Home, // Routing component 
+        component: Home, // Routing component
       },
     ],
   });
 
   createApp(App).use(router).mount("#app");
+  ```
+
+- # In the single page application we can configure the `<a>` tag write as the `router-link`
+  ```js
+  <router-link class="nav-link" to="/about">
+    About
+  </router-link>
   ```
