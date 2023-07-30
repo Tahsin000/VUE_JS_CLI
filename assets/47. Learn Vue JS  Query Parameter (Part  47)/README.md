@@ -1,1 +1,0 @@
-# 47. Learn Vue JS  Query Parameter (Part  47)

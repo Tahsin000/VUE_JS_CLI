@@ -1,1 +1,0 @@
-# Learn Vue js Directives V-text & V-html (Part 6)
