@@ -63,6 +63,15 @@
   createApp(App).use(router).mount("#app");
   ```
 
+  ### 6. configuration the `App.vue` | here is the `App.vue` Code
+  ```js<template>
+  <Navbar />
+  <div>
+    <router-view></router-view>
+  </div>
+  </template>
+  ```
+
 - # In the single page application we can configure the `<a>` tag write as the `router-link`
   ```js
   <router-link class="nav-link" to="/about">
