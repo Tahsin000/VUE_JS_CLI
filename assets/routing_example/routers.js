@@ -1,12 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import About from "@/views/About.vue";
-
 import Home from "@/views/Home.vue";
-import Hawaii from "@/views/Hawaii.vue";
-import Jamaica from "@/views/Jamaica.vue";
-import Panama from "@/views/Panama.vue";
-
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -30,6 +24,11 @@ const router = createRouter({
       path: "/panama",
       name: "Panama",
       component: () => import("@/views/Panama.vue"),
+    },
+    {
+      path: "/destination/:id/:slug",
+      name: "Destination.show",
+      component: () => import("@/views/Destination.vue"),
     },
   ],
   linkActiveClass:'vue-school-active-link'

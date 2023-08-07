@@ -6,7 +6,7 @@
                 class="__border-2"
                 v-for="destination in destinations"
                 :key="destination.id"
-                :to="{name:'Destination.show', params: {id: destination.id, slug: destination.slug}}" 
+                :to="{name:'Destination.show', params: {id: destination.id}}" 
             >
             <h4>{{destination.name}}</h4> 
             <img class="__image" :src="`src/assets/images/${destination.image}`" alt="">

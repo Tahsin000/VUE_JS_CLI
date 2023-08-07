@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <!-- Navbar brand/logo -->
-      <router-link class="navbar-brand" to="/">Vue School Travel App</router-link>
+      <a class="navbar-brand" href="#">My Website</a>
       <!-- Hamburger icon for mobile -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -11,16 +11,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <router-link class="nav-link" to="/destination/3">Brazil</router-link>
+            <router-link class="nav-link" to="/">Home</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/destination/4">Hawaii</router-link>
+            <router-link class="nav-link" to="/brazil">Brazil</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/destination/6">Jamaica</router-link>
+            <router-link class="nav-link" to="/hawaii">Hawaii</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/destination/12">Panama</router-link>
+            <router-link class="nav-link" to="/jamaica">Jamaica</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/panama">Panama</router-link>
           </li>
         </ul>
       </div>
@@ -29,5 +32,7 @@
 </template>
 
 <style>
-
+nav .vue-school-active-link{
+  border-bottom: 2px solid #4d4d4d;
+}
 </style>
