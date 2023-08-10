@@ -1,0 +1,52 @@
+[
+  {
+    "job_id": 1,
+    "job_title": "Software Engineer",
+    "job_details": "We are looking for a skilled software engineer to join our development team."
+  },
+  {
+    "job_id": 2,
+    "job_title": "Data Scientist",
+    "job_details": "Join our data science team to analyze and interpret complex datasets."
+  },
+  {
+    "job_id": 3,
+    "job_title": "UI/UX Designer",
+    "job_details": "Create visually appealing and user-friendly designs for our web and mobile applications."
+  },
+  {
+    "job_id": 4,
+    "job_title": "Marketing Manager",
+    "job_details": "Lead our marketing efforts to promote our products and services to a wider audience."
+  },
+  {
+    "job_id": 5,
+    "job_title": "Project Manager",
+    "job_details": "Manage project timelines, resources, and deliverables to ensure successful project completion."
+  },
+  {
+    "job_id": 6,
+    "job_title": "Customer Support Specialist",
+    "job_details": "Provide excellent customer support through various channels, addressing inquiries and resolving issues."
+  },
+  {
+    "job_id": 7,
+    "job_title": "Sales Representative",
+    "job_details": "Build and maintain relationships with clients, identify sales opportunities, and achieve targets."
+  },
+  {
+    "job_id": 8,
+    "job_title": "Financial Analyst",
+    "job_details": "Analyze financial data, trends, and reports to provide insights for informed decision-making."
+  },
+  {
+    "job_id": 9,
+    "job_title": "Human Resources Coordinator",
+    "job_details": "Support HR processes, recruit talent, manage employee relations, and administer benefits."
+  },
+  {
+    "job_id": 10,
+    "job_title": "Content Writer",
+    "job_details": "Create engaging and informative content for various platforms, such as blogs, social media, and websites."
+  }
+]
